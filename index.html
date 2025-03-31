@@ -2,82 +2,30 @@
 <html lang="nl">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Save the Date</title>
+  <title>Test Save the Date</title>
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
+    body {
+      text-align: center;
+      font-family: Arial;
+      padding: 20px;
     }
-
-    body, html {
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: #fafafa;
-      font-family: Arial, sans-serif;
+    img {
+      width: 80%;
+      height: auto;
     }
-
-    .container {
-      position: relative;
-      width: 90%;
-      max-width: 1280px;
-      aspect-ratio: 16 / 9;
-      overflow: hidden;
-      border-radius: 12px;
-    }
-
-    .container img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
-
-    .title {
-      position: absolute;
-      top: 5%;
-      left: 50%;
-      transform: translateX(-50%);
-      color: white;
-      font-size: clamp(24px, 4vw, 48px);
-      text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
-    }
-
     .button {
-      position: absolute;
-      bottom: 5%;
-      left: 5%;
       padding: 10px 20px;
-      background-color: rgba(0, 0, 0, 0.7);
+      background: black;
       color: white;
       text-decoration: none;
       border-radius: 6px;
-      font-size: clamp(16px, 3vw, 22px);
-    }
-
-    @media (max-width: 600px) {
-      .container {
-        width: 95%;
-      }
-      .title, .button {
-        font-size: clamp(14px, 5vw, 20px);
-      }
     }
   </style>
 </head>
-
 <body>
-  <div class="container">
-    <img src="filmpje.gif" alt="Save the Date">
-    <div class="title">SAVE THE DATE</div>
-    <a href="datum.ics" class="button" download>
-      zet het alvast in je agenda
-    </a>
-  </div>
+  <h1>SAVE THE DATE</h1>
+  <img src="filmpje.gif" alt="GIF Test">
+  <br><br>
+  <a href="datum.ics" class="button" download>zet het alvast in je agenda</a>
 </body>
 </html>
