@@ -5,28 +5,43 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Save the Date</title>
   <style>
-    body {
-      text-align: center;
+    body, html {
+      height: 100%;
+      margin: 0;
       font-family: Arial, sans-serif;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(4, 1fr);
       background-color: #fafafa;
-      padding: 2rem;
     }
     h1 {
-      color: #333;
+      grid-column: 2;
+      grid-row: 1;
+      align-self: center;
+      justify-self: center;
+      color: white;
+      z-index: 1;
     }
     img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 12px;
+      grid-column: 1 / span 3;
+      grid-row: 1 / span 4;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
     }
     .button {
-      margin-top: 20px;
+      grid-column: 1;
+      grid-row: 4;
+      align-self: center;
+      justify-self: center;
       padding: 10px 20px;
-      background-color: #0056b3;
+      background-color: rgba(0, 0, 0, 0.7);
       color: white;
       text-decoration: none;
       border-radius: 5px;
       font-size: 1.1rem;
+      z-index: 1;
     }
   </style>
 </head>
@@ -36,11 +51,9 @@
 
   <img src="filmpje.gif" alt="Save the date">
 
-  <div>
-    <a class="button" href="datum.ics" download="datum.ics">
-      📅 Zet het alvast in je agenda
-    </a>
-  </div>
+  <a class="button" href="datum.ics" download="datum.ics">
+    📅 Zet het alvast in je agenda
+  </a>
 
 </body>
 </html>
