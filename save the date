@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Save the Date</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial, sans-serif;
+      background-color: #fafafa;
+      padding: 2rem;
+    }
+    h1 {
+      color: #333;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+    }
+    .button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #0056b3;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 1.1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>SAVE THE DATE</h1>
+
+  <img src="filmpje.gif" alt="Save the date">
+
+  <div>
+    <a class="button" href="datum.ics" download="datum.ics">
+      📅 Zet het alvast in je agenda
+    </a>
+  </div>
+
+</body>
+</html>
