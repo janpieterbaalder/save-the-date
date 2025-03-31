@@ -1,31 +1,71 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-  <meta charset="UTF-8">
-  <title>Test Save the Date</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Save the Date</title>
   <style>
     body {
-      text-align: center;
-      font-family: Arial;
-      padding: 20px;
+      margin: 0;
+      padding: 0;
+      background-color: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
     }
-    img {
-      width: 80%;
-      height: auto;
+
+    .wrapper {
+      width: 90%;
+      max-width: 1280px;
+      aspect-ratio: 16 / 9;
+      position: relative;
     }
-    .button {
-      padding: 10px 20px;
-      background: black;
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 2;
+      pointer-events: none; /* zorgt dat klikbare elementen onder de grid bereikbaar blijven */
+    }
+
+    .title {
+      grid-column: 2 / 3;
+      grid-row: 1 / 2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       color: white;
-      text-decoration: none;
-      border-radius: 6px;
+      font-size: clamp(24px, 4vw, 48px);
+      text-align: center;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+      pointer-events: auto;
+    }
+
+    .background {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
     }
   </style>
 </head>
 <body>
-  <h1>SAVE THE DATE</h1>
-  <img src="filmpje.gif" alt="GIF Test">
-  <br><br>
-  <a href="datum.ics" class="button" download>zet het alvast in je agenda</a>
+  <div class="wrapper">
+    <img src="filmpje.gif" alt="Save the Date" class="background">
+    <div class="grid">
+      <div class="title">SAVE THE DATE</div>
+    </div>
+  </div>
 </body>
 </html>
