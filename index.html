@@ -32,7 +32,6 @@
       top: 0;
       left: 0;
       z-index: 2;
-      pointer-events: none; /* zorgt dat klikbare elementen onder de grid bereikbaar blijven */
     }
 
     .title {
@@ -45,14 +44,30 @@
       font-size: clamp(24px, 4vw, 48px);
       text-align: center;
       text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
-      pointer-events: auto;
+    }
+
+    .button-wrapper {
+      grid-column: 1 / 2;
+      grid-row: 4 / 5;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-end;
+      padding: 20px;
+    }
+
+    .button {
+      background-color: rgba(0, 0, 0, 0.7);
+      color: white;
+      text-decoration: none;
+      padding: 12px 20px;
+      border-radius: 6px;
+      font-size: clamp(16px, 3vw, 22px);
     }
 
     .background {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      display: block;
       position: absolute;
       top: 0;
       left: 0;
@@ -65,6 +80,11 @@
     <img src="filmpje.gif" alt="Save the Date" class="background">
     <div class="grid">
       <div class="title">SAVE THE DATE</div>
+      <div class="button-wrapper">
+        <a href="datum.ics" class="button" download>
+          Zet het gelijk in je agenda
+        </a>
+      </div>
     </div>
   </div>
 </body>
